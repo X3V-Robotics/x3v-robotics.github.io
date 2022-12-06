@@ -7,8 +7,6 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-	<link rel="apple-touch-icon" href="/icon-192x192.png">
-
     <meta name="theme-color" content="#000000" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
@@ -16,7 +14,7 @@
 		body {
 			margin: 0;
 			padding: 0;
-			background-color: #4A4A4A;
+			background-color: #000000;
             overflow: hidden;
 		}
         #canvasArea {
@@ -36,13 +34,15 @@
 	<script src="inputmanager.js" crossorigin="anonymous"></script>
 	<script src="jsonmanager.js" crossorigin="anonymous"></script>
 	<script src="timemanager.js" crossorigin="anonymous"></script>
+	<script src="polygon.js" crossorigin="anonymous"></script>
 	<script src="runtimeobject.js" crossorigin="anonymous"></script>
 	<script src="profiler.js" crossorigin="anonymous"></script>
+	<script src="RuntimeInstanceContainer.js" crossorigin="anonymous"></script>
 	<script src="runtimescene.js" crossorigin="anonymous"></script>
 	<script src="scenestack.js" crossorigin="anonymous"></script>
-	<script src="polygon.js" crossorigin="anonymous"></script>
 	<script src="force.js" crossorigin="anonymous"></script>
 	<script src="layer.js" crossorigin="anonymous"></script>
+	<script src="RuntimeSceneLayer.js" crossorigin="anonymous"></script>
 	<script src="timer.js" crossorigin="anonymous"></script>
 	<script src="runtimegame.js" crossorigin="anonymous"></script>
 	<script src="variable.js" crossorigin="anonymous"></script>
@@ -50,6 +50,9 @@
 	<script src="oncetriggers.js" crossorigin="anonymous"></script>
 	<script src="runtimebehavior.js" crossorigin="anonymous"></script>
 	<script src="spriteruntimeobject.js" crossorigin="anonymous"></script>
+	<script src="affinetransformation.js" crossorigin="anonymous"></script>
+	<script src="CustomRuntimeObjectInstanceContainer.js" crossorigin="anonymous"></script>
+	<script src="CustomRuntimeObject.js" crossorigin="anonymous"></script>
 	<script src="events-tools/commontools.js" crossorigin="anonymous"></script>
 	<script src="events-tools/variabletools.js" crossorigin="anonymous"></script>
 	<script src="events-tools/runtimescenetools.js" crossorigin="anonymous"></script>
@@ -70,6 +73,8 @@
 	<script src="pixi-renderers/pixi-image-manager.js" crossorigin="anonymous"></script>
 	<script src="pixi-renderers/pixi-bitmapfont-manager.js" crossorigin="anonymous"></script>
 	<script src="pixi-renderers/spriteruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="pixi-renderers/CustomObjectPixiRenderer.js" crossorigin="anonymous"></script>
+	<script src="pixi-renderers/DebuggerPixiRenderer.js" crossorigin="anonymous"></script>
 	<script src="pixi-renderers/loadingscreen-pixi-renderer.js" crossorigin="anonymous"></script>
 	<script src="pixi-renderers/pixi-effects-manager.js" crossorigin="anonymous"></script>
 	<script src="howler-sound-manager/howler.min.js" crossorigin="anonymous"></script>
@@ -90,14 +95,13 @@
 	<script src="code1.js" crossorigin="anonymous"></script>
 	<script src="code2.js" crossorigin="anonymous"></script>
 	<script src="code3.js" crossorigin="anonymous"></script>
-	<script src="code4.js" crossorigin="anonymous"></script>
 	<script src="data.js" crossorigin="anonymous"></script>
 
 
 </head>
 <body>
 
-    <script src="/app.js"></script>
+    
 	<script>
 
     (function() {
