@@ -5,12 +5,16 @@ gdjs.evtsExt__Swipe__Swipe = gdjs.evtsExt__Swipe__Swipe || {};
  * Behavior generated from Swipe Detector
  */
 gdjs.evtsExt__Swipe__Swipe.Swipe = class Swipe extends gdjs.RuntimeBehavior {
-  constructor(runtimeScene, behaviorData, owner) {
-    super(runtimeScene, behaviorData, owner);
-    this._runtimeScene = runtimeScene;
+  constructor(instanceContainer, behaviorData, owner) {
+    super(instanceContainer, behaviorData, owner);
+    this._runtimeScene = instanceContainer;
 
     this._onceTriggers = new gdjs.OnceTriggers();
     this._behaviorData = {};
+    this._sharedData = gdjs.evtsExt__Swipe__Swipe.Swipe.getSharedData(
+      instanceContainer,
+      behaviorData.name
+    );
     
     this._behaviorData.Time = behaviorData.Time !== undefined ? behaviorData.Time : Number("0.200") || 0;
     this._behaviorData.MinLength = behaviorData.MinLength !== undefined ? behaviorData.MinLength : Number("100") || 0;
@@ -140,6 +144,30 @@ gdjs.evtsExt__Swipe__Swipe.Swipe = class Swipe extends gdjs.RuntimeBehavior {
   _setDone(newValue) {
     this._behaviorData.Done = newValue;
   }
+}
+
+/**
+ * Shared data generated from Swipe Detector
+ */
+gdjs.evtsExt__Swipe__Swipe.Swipe.SharedData = class SwipeSharedData {
+  constructor(sharedData) {
+    
+  }
+  
+  // Shared properties:
+  
+}
+
+gdjs.evtsExt__Swipe__Swipe.Swipe.getSharedData = function(instanceContainer, behaviorName) {
+  if (!instanceContainer._Swipe_SwipeSharedData) {
+    const initialData = instanceContainer.getInitialSharedDataForBehavior(
+      behaviorName
+    );
+    instanceContainer._Swipe_SwipeSharedData = new gdjs.evtsExt__Swipe__Swipe.Swipe.SharedData(
+      initialData
+    );
+  }
+  return instanceContainer._Swipe_SwipeSharedData;
 }
 
 // Methods:
@@ -308,7 +336,7 @@ gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.doStepPreEventsContext.condition0IsTr
 }if ( gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.doStepPreEventsContext.condition0IsTrue_0.val ) {
 {
 {gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.doStepPreEventsContext.conditionTrue_1 = gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.doStepPreEventsContext.condition1IsTrue_0;
-gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.doStepPreEventsContext.conditionTrue_1.val = eventsFunctionContext.getOnceTriggers().triggerOnce(11267316);
+gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.doStepPreEventsContext.conditionTrue_1.val = eventsFunctionContext.getOnceTriggers().triggerOnce(10223412);
 }
 }}
 if (gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.doStepPreEventsContext.condition1IsTrue_0.val) {
@@ -424,7 +452,7 @@ var eventsFunctionContext = {
     return eventsFunctionContext._objectsMap[objectName] || null;
   },
   getBehaviorName: function(behaviorName) {
-    return eventsFunctionContext._behaviorNamesMap[behaviorName];
+    return eventsFunctionContext._behaviorNamesMap[behaviorName] || behaviorName;
   },
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
@@ -463,6 +491,7 @@ gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.doStepPreEventsContext.GDObjectObject
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.doStepPreEventsContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.doStepPreEventsContext.eventsList5(runtimeScene, eventsFunctionContext);
+
 return;
 }
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.doStepPostEventsContext = {};
@@ -555,7 +584,7 @@ var eventsFunctionContext = {
     return eventsFunctionContext._objectsMap[objectName] || null;
   },
   getBehaviorName: function(behaviorName) {
-    return eventsFunctionContext._behaviorNamesMap[behaviorName];
+    return eventsFunctionContext._behaviorNamesMap[behaviorName] || behaviorName;
   },
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
@@ -594,6 +623,7 @@ gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.doStepPostEventsContext.GDObjectObjec
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.doStepPostEventsContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.doStepPostEventsContext.eventsList0(runtimeScene, eventsFunctionContext);
+
 return;
 }
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.onDestroyContext = {};
@@ -648,7 +678,7 @@ var eventsFunctionContext = {
     return eventsFunctionContext._objectsMap[objectName] || null;
   },
   getBehaviorName: function(behaviorName) {
-    return eventsFunctionContext._behaviorNamesMap[behaviorName];
+    return eventsFunctionContext._behaviorNamesMap[behaviorName] || behaviorName;
   },
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
@@ -687,6 +717,7 @@ gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.onDestroyContext.GDObjectObjects1.len
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.onDestroyContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.onDestroyContext.eventsList0(runtimeScene, eventsFunctionContext);
+
 return;
 }
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.IsDoneContext = {};
@@ -745,7 +776,7 @@ var eventsFunctionContext = {
     return eventsFunctionContext._objectsMap[objectName] || null;
   },
   getBehaviorName: function(behaviorName) {
-    return eventsFunctionContext._behaviorNamesMap[behaviorName];
+    return eventsFunctionContext._behaviorNamesMap[behaviorName] || behaviorName;
   },
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
@@ -784,6 +815,7 @@ gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.IsDoneContext.GDObjectObjects1.length
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.IsDoneContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.IsDoneContext.eventsList0(runtimeScene, eventsFunctionContext);
+
 return !!eventsFunctionContext.returnValue;
 }
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.StartPointXContext = {};
@@ -832,7 +864,7 @@ var eventsFunctionContext = {
     return eventsFunctionContext._objectsMap[objectName] || null;
   },
   getBehaviorName: function(behaviorName) {
-    return eventsFunctionContext._behaviorNamesMap[behaviorName];
+    return eventsFunctionContext._behaviorNamesMap[behaviorName] || behaviorName;
   },
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
@@ -871,6 +903,7 @@ gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.StartPointXContext.GDObjectObjects1.l
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.StartPointXContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.StartPointXContext.eventsList0(runtimeScene, eventsFunctionContext);
+
 return Number(eventsFunctionContext.returnValue) || 0;
 }
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.StartPointYContext = {};
@@ -919,7 +952,7 @@ var eventsFunctionContext = {
     return eventsFunctionContext._objectsMap[objectName] || null;
   },
   getBehaviorName: function(behaviorName) {
-    return eventsFunctionContext._behaviorNamesMap[behaviorName];
+    return eventsFunctionContext._behaviorNamesMap[behaviorName] || behaviorName;
   },
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
@@ -958,6 +991,7 @@ gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.StartPointYContext.GDObjectObjects1.l
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.StartPointYContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.StartPointYContext.eventsList0(runtimeScene, eventsFunctionContext);
+
 return Number(eventsFunctionContext.returnValue) || 0;
 }
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.EndPointXContext = {};
@@ -1006,7 +1040,7 @@ var eventsFunctionContext = {
     return eventsFunctionContext._objectsMap[objectName] || null;
   },
   getBehaviorName: function(behaviorName) {
-    return eventsFunctionContext._behaviorNamesMap[behaviorName];
+    return eventsFunctionContext._behaviorNamesMap[behaviorName] || behaviorName;
   },
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
@@ -1045,6 +1079,7 @@ gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.EndPointXContext.GDObjectObjects1.len
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.EndPointXContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.EndPointXContext.eventsList0(runtimeScene, eventsFunctionContext);
+
 return Number(eventsFunctionContext.returnValue) || 0;
 }
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.EndPointYContext = {};
@@ -1093,7 +1128,7 @@ var eventsFunctionContext = {
     return eventsFunctionContext._objectsMap[objectName] || null;
   },
   getBehaviorName: function(behaviorName) {
-    return eventsFunctionContext._behaviorNamesMap[behaviorName];
+    return eventsFunctionContext._behaviorNamesMap[behaviorName] || behaviorName;
   },
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
@@ -1132,6 +1167,7 @@ gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.EndPointYContext.GDObjectObjects1.len
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.EndPointYContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.EndPointYContext.eventsList0(runtimeScene, eventsFunctionContext);
+
 return Number(eventsFunctionContext.returnValue) || 0;
 }
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.LengthContext = {};
@@ -1183,7 +1219,7 @@ var eventsFunctionContext = {
     return eventsFunctionContext._objectsMap[objectName] || null;
   },
   getBehaviorName: function(behaviorName) {
-    return eventsFunctionContext._behaviorNamesMap[behaviorName];
+    return eventsFunctionContext._behaviorNamesMap[behaviorName] || behaviorName;
   },
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
@@ -1222,6 +1258,7 @@ gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.LengthContext.GDObjectObjects1.length
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.LengthContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.LengthContext.eventsList0(runtimeScene, eventsFunctionContext);
+
 return Number(eventsFunctionContext.returnValue) || 0;
 }
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.DirectionYContext = {};
@@ -1300,7 +1337,7 @@ var eventsFunctionContext = {
     return eventsFunctionContext._objectsMap[objectName] || null;
   },
   getBehaviorName: function(behaviorName) {
-    return eventsFunctionContext._behaviorNamesMap[behaviorName];
+    return eventsFunctionContext._behaviorNamesMap[behaviorName] || behaviorName;
   },
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
@@ -1339,6 +1376,7 @@ gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.DirectionYContext.GDObjectObjects1.le
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.DirectionYContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.DirectionYContext.eventsList0(runtimeScene, eventsFunctionContext);
+
 return Number(eventsFunctionContext.returnValue) || 0;
 }
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.DirectionXContext = {};
@@ -1417,7 +1455,7 @@ var eventsFunctionContext = {
     return eventsFunctionContext._objectsMap[objectName] || null;
   },
   getBehaviorName: function(behaviorName) {
-    return eventsFunctionContext._behaviorNamesMap[behaviorName];
+    return eventsFunctionContext._behaviorNamesMap[behaviorName] || behaviorName;
   },
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
@@ -1456,6 +1494,7 @@ gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.DirectionXContext.GDObjectObjects1.le
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.DirectionXContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.DirectionXContext.eventsList0(runtimeScene, eventsFunctionContext);
+
 return Number(eventsFunctionContext.returnValue) || 0;
 }
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.DirectionNormXContext = {};
@@ -1534,7 +1573,7 @@ var eventsFunctionContext = {
     return eventsFunctionContext._objectsMap[objectName] || null;
   },
   getBehaviorName: function(behaviorName) {
-    return eventsFunctionContext._behaviorNamesMap[behaviorName];
+    return eventsFunctionContext._behaviorNamesMap[behaviorName] || behaviorName;
   },
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
@@ -1573,6 +1612,7 @@ gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.DirectionNormXContext.GDObjectObjects
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.DirectionNormXContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.DirectionNormXContext.eventsList0(runtimeScene, eventsFunctionContext);
+
 return Number(eventsFunctionContext.returnValue) || 0;
 }
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.DirectionNormYContext = {};
@@ -1651,7 +1691,7 @@ var eventsFunctionContext = {
     return eventsFunctionContext._objectsMap[objectName] || null;
   },
   getBehaviorName: function(behaviorName) {
-    return eventsFunctionContext._behaviorNamesMap[behaviorName];
+    return eventsFunctionContext._behaviorNamesMap[behaviorName] || behaviorName;
   },
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
@@ -1690,6 +1730,7 @@ gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.DirectionNormYContext.GDObjectObjects
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.DirectionNormYContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.DirectionNormYContext.eventsList0(runtimeScene, eventsFunctionContext);
+
 return Number(eventsFunctionContext.returnValue) || 0;
 }
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.AngleContext = {};
@@ -1751,7 +1792,7 @@ var eventsFunctionContext = {
     return eventsFunctionContext._objectsMap[objectName] || null;
   },
   getBehaviorName: function(behaviorName) {
-    return eventsFunctionContext._behaviorNamesMap[behaviorName];
+    return eventsFunctionContext._behaviorNamesMap[behaviorName] || behaviorName;
   },
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
@@ -1790,6 +1831,7 @@ gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.AngleContext.GDObjectObjects1.length 
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.AngleContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.AngleContext.eventsList0(runtimeScene, eventsFunctionContext);
+
 return Number(eventsFunctionContext.returnValue) || 0;
 }
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.Average4DirectionContext = {};
@@ -2027,7 +2069,7 @@ var eventsFunctionContext = {
     return eventsFunctionContext._objectsMap[objectName] || null;
   },
   getBehaviorName: function(behaviorName) {
-    return eventsFunctionContext._behaviorNamesMap[behaviorName];
+    return eventsFunctionContext._behaviorNamesMap[behaviorName] || behaviorName;
   },
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
@@ -2067,6 +2109,7 @@ gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.Average4DirectionContext.GDObjectObje
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.Average4DirectionContext.GDObjectObjects3.length = 0;
 
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.Average4DirectionContext.eventsList2(runtimeScene, eventsFunctionContext);
+
 return "" + eventsFunctionContext.returnValue;
 }
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.Average8DirectionContext = {};
@@ -2444,7 +2487,7 @@ var eventsFunctionContext = {
     return eventsFunctionContext._objectsMap[objectName] || null;
   },
   getBehaviorName: function(behaviorName) {
-    return eventsFunctionContext._behaviorNamesMap[behaviorName];
+    return eventsFunctionContext._behaviorNamesMap[behaviorName] || behaviorName;
   },
   createObject: function(objectName) {
     const objectsList = eventsFunctionContext._objectsMap[objectName];
@@ -2484,6 +2527,7 @@ gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.Average8DirectionContext.GDObjectObje
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.Average8DirectionContext.GDObjectObjects3.length = 0;
 
 gdjs.evtsExt__Swipe__Swipe.Swipe.prototype.Average8DirectionContext.eventsList2(runtimeScene, eventsFunctionContext);
+
 return "" + eventsFunctionContext.returnValue;
 }
 

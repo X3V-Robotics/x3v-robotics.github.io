@@ -235,7 +235,7 @@ gdjs.SettingsCode.condition0IsTrue_0.val = gdjs.evtTools.variable.getVariableNum
 gdjs.SettingsCode.condition0IsTrue_0.val = false;
 {
 {gdjs.SettingsCode.conditionTrue_1 = gdjs.SettingsCode.condition0IsTrue_0;
-gdjs.SettingsCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11224012);
+gdjs.SettingsCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(10549900);
 }
 }if (gdjs.SettingsCode.condition0IsTrue_0.val) {
 gdjs.copyArray(runtimeScene.getObjects("SensitivityHidden"), gdjs.SettingsCode.GDSensitivityHiddenObjects2);
@@ -499,7 +499,7 @@ gdjs.SettingsCode.eventsList5(runtimeScene);} //End of subevents
 gdjs.SettingsCode.condition0IsTrue_0.val = false;
 {
 {gdjs.SettingsCode.conditionTrue_1 = gdjs.SettingsCode.condition0IsTrue_0;
-gdjs.SettingsCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11234092);
+gdjs.SettingsCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(10559980);
 }
 }if (gdjs.SettingsCode.condition0IsTrue_0.val) {
 
@@ -613,7 +613,7 @@ gdjs.SettingsCode.condition0IsTrue_0.val = gdjs.evtTools.variable.getVariableBoo
 gdjs.SettingsCode.condition0IsTrue_0.val = false;
 {
 {gdjs.SettingsCode.conditionTrue_1 = gdjs.SettingsCode.condition0IsTrue_0;
-gdjs.SettingsCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11240196);
+gdjs.SettingsCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(10566084);
 }
 }if (gdjs.SettingsCode.condition0IsTrue_0.val) {
 
@@ -762,7 +762,7 @@ gdjs.SettingsCode.eventsList13(runtimeScene);} //End of subevents
 gdjs.SettingsCode.condition0IsTrue_0.val = false;
 {
 {gdjs.SettingsCode.conditionTrue_1 = gdjs.SettingsCode.condition0IsTrue_0;
-gdjs.SettingsCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11244868);
+gdjs.SettingsCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(10570756);
 }
 }if (gdjs.SettingsCode.condition0IsTrue_0.val) {
 
@@ -883,6 +883,7 @@ gdjs.SettingsCode.GDControlsToggleObjects3.length = 0;
 gdjs.SettingsCode.GDControlsToggleObjects4.length = 0;
 
 gdjs.SettingsCode.eventsList16(runtimeScene);
+
 return;
 
 }

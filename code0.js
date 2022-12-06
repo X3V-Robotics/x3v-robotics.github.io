@@ -105,6 +105,7 @@ gdjs.StartScreenCode.GDSkillsTxtObjects1.length = 0;
 gdjs.StartScreenCode.GDSkillsTxtObjects2.length = 0;
 
 gdjs.StartScreenCode.eventsList2(runtimeScene);
+
 return;
 
 }

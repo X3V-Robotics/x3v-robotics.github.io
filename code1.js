@@ -3223,6 +3223,7 @@ gdjs.MatchSwipeCode.GDClearObjects3.length = 0;
 gdjs.MatchSwipeCode.GDClearObjects4.length = 0;
 
 gdjs.MatchSwipeCode.eventsList32(runtimeScene);
+
 return;
 
 }
