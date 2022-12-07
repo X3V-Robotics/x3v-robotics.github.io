@@ -1583,7 +1583,7 @@ gdjs.SkillsCode.GDTimerElementObjects2.length = k;}if (gdjs.SkillsCode.condition
 gdjs.SkillsCode.condition0IsTrue_0.val = false;
 {
 {gdjs.SkillsCode.conditionTrue_1 = gdjs.SkillsCode.condition0IsTrue_0;
-gdjs.SkillsCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(10191892);
+gdjs.SkillsCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(10568180);
 }
 }if (gdjs.SkillsCode.condition0IsTrue_0.val) {
 gdjs.copyArray(runtimeScene.getObjects("TimerBackground"), gdjs.SkillsCode.GDTimerBackgroundObjects2);
@@ -1691,9 +1691,14 @@ gdjs.SkillsCode.eventsList18(runtimeScene);} //End of subevents
 
 
 gdjs.SkillsCode.condition0IsTrue_0.val = false;
+gdjs.SkillsCode.condition1IsTrue_0.val = false;
 {
 gdjs.SkillsCode.condition0IsTrue_0.val = !(gdjs.evtTools.runtimeScene.timerPaused(runtimeScene, "Timer"));
-}if (gdjs.SkillsCode.condition0IsTrue_0.val) {
+}if ( gdjs.SkillsCode.condition0IsTrue_0.val ) {
+{
+gdjs.SkillsCode.condition1IsTrue_0.val = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "Timer") <= 60;
+}}
+if (gdjs.SkillsCode.condition1IsTrue_0.val) {
 gdjs.copyArray(runtimeScene.getObjects("TimerElement"), gdjs.SkillsCode.GDTimerElementObjects1);
 gdjs.copyArray(runtimeScene.getObjects("TimerTxt"), gdjs.SkillsCode.GDTimerTxtObjects1);
 {for(var i = 0, len = gdjs.SkillsCode.GDTimerTxtObjects1.length ;i < len;++i) {

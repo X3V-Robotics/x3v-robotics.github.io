@@ -235,7 +235,7 @@ gdjs.SettingsCode.condition0IsTrue_0.val = gdjs.evtTools.variable.getVariableNum
 gdjs.SettingsCode.condition0IsTrue_0.val = false;
 {
 {gdjs.SettingsCode.conditionTrue_1 = gdjs.SettingsCode.condition0IsTrue_0;
-gdjs.SettingsCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(10549900);
+gdjs.SettingsCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(10601764);
 }
 }if (gdjs.SettingsCode.condition0IsTrue_0.val) {
 gdjs.copyArray(runtimeScene.getObjects("SensitivityHidden"), gdjs.SettingsCode.GDSensitivityHiddenObjects2);
@@ -499,7 +499,7 @@ gdjs.SettingsCode.eventsList5(runtimeScene);} //End of subevents
 gdjs.SettingsCode.condition0IsTrue_0.val = false;
 {
 {gdjs.SettingsCode.conditionTrue_1 = gdjs.SettingsCode.condition0IsTrue_0;
-gdjs.SettingsCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(10559980);
+gdjs.SettingsCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(10611844);
 }
 }if (gdjs.SettingsCode.condition0IsTrue_0.val) {
 
@@ -613,7 +613,7 @@ gdjs.SettingsCode.condition0IsTrue_0.val = gdjs.evtTools.variable.getVariableBoo
 gdjs.SettingsCode.condition0IsTrue_0.val = false;
 {
 {gdjs.SettingsCode.conditionTrue_1 = gdjs.SettingsCode.condition0IsTrue_0;
-gdjs.SettingsCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(10566084);
+gdjs.SettingsCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(10617948);
 }
 }if (gdjs.SettingsCode.condition0IsTrue_0.val) {
 
@@ -762,7 +762,7 @@ gdjs.SettingsCode.eventsList13(runtimeScene);} //End of subevents
 gdjs.SettingsCode.condition0IsTrue_0.val = false;
 {
 {gdjs.SettingsCode.conditionTrue_1 = gdjs.SettingsCode.condition0IsTrue_0;
-gdjs.SettingsCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(10570756);
+gdjs.SettingsCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(10622620);
 }
 }if (gdjs.SettingsCode.condition0IsTrue_0.val) {
 
